@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I-Imagine</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        header {
+            height: 825px;
+            /* width: 1000px; */
+            margin: 0px;
+
+            background-image: url(jaanus-jagomagi-aIgGJronG80-unsplash.jpg);
+            background-size: 1263px 831px;
+            background-repeat: no-repeat;
+            background-clip: padding-box;
+            color: white;
+            /* border: 20px solid white; */
+        }
+
+        .name {
+            width: 1000px;
+            height: 70px;
+            display: inline-block;
+            position: sticky;
+            top: 27px;
+            /* left: 100px; */
+            padding: 2px 50px 2px 20px;
+            /* margin: 0px 0px 0px 0px; */
+
+            background: #f5f5dc24;
+            
+
+            border-bottom: 2px solid #2d5a5a;
+            border-right: 2px solid #274747;
+            border-left: 2px solid #274747;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 90px;
+            border-bottom-left-radius: 40px;
+            border-top-left-radius: 40px;
+
+            font-family: 'Crimson Text', serif;
+            font-size: 48px;
+            font-weight: 600;
+            text-align: left;
+
+
+        }
+
+        #nameid {
+            position: relative;
+            bottom: 3px;
+        }
+
+
+
+        .logo {
+            height: 50px;
+            width: 50px;
+        }
+
+        .joining {
+            position: relative;
+            left: 15px;
+            top: 10px;
+
+            border-right: 2px white solid;
+            background: #5a5a5a7d;
+
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+
+            padding: 10px;
+            margin: 20px;
+        }
+
+        .menu ul li a:hover,
+        header a:hover {
+            cursor: grab;
+            text-decoration: underline;
+        }
+
+        /* .menu ul li a:visited,
+        header a:active {
+            /* background-color: rgba(41, 138, 138, 0.479); */
+        /* } */ 
+
+        .container {
+            position: relative;
+            height: 250px;
+            top: 120px;
+            left: 55px;
+            width: 500px;
+            /* border: 2px solid #2d5e6b; */
+            display: inline-block;
+        }
+
+
+        .social {
+            height: 30px;
+            width: 30px;
+            float: right;
+            margin: 15px 0px 5px 30px;
+        }
+
+        .menu {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            display: block;
+            /* overflow: auto; */
+        }
+
+        .menu li {
+            float: left;
+            list-style: none;
+            margin: 5px;
+
+        }
+
+        .menubar a {
+            padding: 9px;
+            margin: 0px 50px;
+            top: 20px;
+            position: relative;
+            border: 1px #ff000000 solid;
+            color: white;
+            text-decoration: none;
+            border-left: 1px solid red;
+            border-right: 2px rgb(26, 26, 255) solid;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .container p {
+            padding: 30px 20px 0px 7px;
+            font-size: 14px;
+            color: #ffffff94;
+        }
+
+        .container h1 {
+            font-size: 35px;
+            margin: 3px 7px;
+        }
+
+        .startingform {
+            /* border: 2px solid red; */
+            background-color: #ffffff30;
+
+            height: 380px;
+            width: 420px;
+            position: relative;
+            right: 75px;
+            text-align: center;
+            top: 90px;
+            padding: 15px 32px;
+            float: right;
+            /* overflow: auto; */
+        }
+
+        .startingform input {
+            border: none;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            border-right: 2px solid rgb(255, 255, 255);
+            border-radius: 5px;
+            background: #00000073;
+            height: 25px;
+            width: 300px;
+            padding: 3px;
+            margin: 6px 15px;
+            place-content: center;
+            color: #c5c5c5;
+        }
+
+        .startingform h3 {
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 10px;
+            color: rgb(255, 255, 255);
+        }
+
+        .story {
+            height: 130px;
+            /* width: 10px; */
+
+        }
+
+        form textarea {
+            border: none;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            border-right: 2px solid rgb(255, 255, 255);
+            border-radius: 5px;
+            background: #00000073;
+            height: 25px;
+            width: 300px;
+            padding: 3px;
+            margin: 6px 15px;
+            place-content: center;
+            color: #c5c5c5;
+        }
+
+        #robo {
+            height: 10px;
+            width: 10px;
+            margin: 0px 0px;
+            padding: 2px;
+        }
+
+        .robottxt {
+            color: #ffffff;
+            background: #152f2f;
+            display: inline;
+
+        }
+
+        #gossip {
+            top: 210px;
+            position: relative;
+            margin: 0px;
+            width: 1265px;
+            height: 120px;
+            /* border: 2px solid red; */
+        }
+
+        .thinker {
+            float: left;
+            margin-top: 70px;
+            height: 600px;
+        }
+
+        .about {
+            background-image: url(matt-gross-9aCkSl6YcXg-unsplash.jpg);
+            height: 925px;
+            background-size: contain;
+        }
+
+        .aboutbox {
+            border-left: 2px solid #ffffff;
+            color: white;
+            float: right;
+            height: 73%;
+            width: 71%;
+            background: #ffffff29;
+        }
+
+        .aboutbox h1 {
+            font-weight: 700;
+            font-size: 50px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .aboutbox p {
+            margin: 25px 70px;
+        }
+
+        .team {
+            /* border: 2px solid red; */
+            height: 72%;
+        }
+
+        .team div {
+            /* border: 2px solid #ffe1e1; */
+            height: 92%;
+            width: 46%;
+            float: left;
+            margin: 2% 2%;
+
+        }
+
+        .team h1 {
+            font-size: 27px;
+        }
+
+        .aboutimg {
+            height: 40%;
+            margin: 9px 56px;
+        }
+
+        .foot {
+            border-top: 2px solid #ffffff33;
+            border-top-left-radius: 45px;
+            clear: both;
+            height: 250px;
+            color: white;
+        }
+
+        .foot div {
+            /* border-right: 2px solid red; */
+            height: 88%;
+            /* border-top-left-radius: 98px; */
+            border-top-right-radius: 50px;
+            /* text-align: right; */
+            width: 25%;
+            background: #ffffff0d;
+            margin: 13px 51px;
+            float: right;
+
+        }
+
+        .footlist h3 {
+            margin: 10px 8px;
+            font-size: 25px;
+            font-weight: 900;
+        }
+
+        .footlist li {
+
+            margin: 25px 25px;
+        }
+
+        .footlist ul {
+            list-style-type: circle;
+        }
+
+        #cornerlogo {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            /* border-radius: 40px; */
+            /* border: 2px red solid; */
+
+        }
+
+        #box4 {
+            position: fixed;
+            right: 27px;
+            bottom: 0px;
+            border-top: 3px solid #dfdfdf;
+            border-right: 3px solid #dfdfdf;
+            /* border-left: 0px solid #d4000040; */
+            height: 34px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 10px;
+            margin: auto;
+            padding: 8px 21px 9px 26px;
+            box-sizing: border-box;
+            color: white;
+            background-color: #274747;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mybody">
+        <header>
+
+            <div class="name">
+                <img class="logo" id="toplogo" src="logo.png" alt="">
+
+                <span id="nameid">I~magine</span>
+
+                <img class="social" id="linkedin" src="linkedinicon.png" alt="">
+                <img class="social" id="insta" src="instaicon.png" alt="">
+                <img class="social" id="fb" src="fbicon.png" alt="">
+                <img class="social" id="twitter" src="twittericon.png" alt="">
+            </div>
+            <a href="#" class="joining">Sign Up</a>
+            <a href="#" class="joining">Sign In</a>
+
+            <div class="menu">
+                <ul class="menuul">
+                    <li class="menubar"><a href="#"> Home</a></li>
+                    <li class="menubar"><a href="#"> Trending</a></li>
+                    <li class="menubar"><a href="#"> Following</a></li>
+                    <li class="menubar"><a href="#"> Account</a></li>
+                    <li class="menubar"><a href="#"> Help</a></li>
+                </ul>
+            </div>
+
+            <div class="container">
+                <h1>What you Imagine is what makes your world,
+                    Imagine a world for you.</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui repellat ducimus, cum ab quasi nisi
+                    sed totam quisquam, quo, Lorem5 amet consectetur adipisicing elit. Culpa vero eaque reiciendis quia
+                    eius,
+                    natus porro corporis.
+                <p>
+            </div>
+
+            <div class="startingform">
+                <form action="#">
+                    <h3>Let's Start
+                        <hr>
+                    </h3>
+                    Imagine your name : <input type="text">
+                    <label for="story">Start Your Story:</label><br>
+                    <textarea class="story" cols="10" rows="5" placeholder="A story that changes my mind."></textarea><br>
+                    <label for="robo"></label>
+                    <input type="checkbox" name="robo" id="robo">
+                    <div class="robottxt">I am not a Robot</div>
+                </form>
+                <!-- <button class="submitbtn" type="submit">Submit</button> -->
+                <button type="button" class="btn btn-outline-light">Submit</button>
+            </div>
+            <img class="imgs" id="gossip" src="gossip2.png" alt="">
+
+        </header>
+    </div>
+
+    <article class="about" id="content">
+        <img class="thinker" src="thinker.png" alt="">
+        <div class="aboutbox">
+            <h1>About Us</h1>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat ducimus voluptate sequi fuga esse
+                beatae minus. Quis aliquam deleniti dicta repellat architecto
+                assumenda unde modi?</p>
+
+            <div class="team">
+                <div class="plan" id="you">
+                    <h1>
+                        What's yours?
+                    </h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia consectetur nesciunt, ipsa
+                        nisivel culpa, dicta aliquam? Enim, reprehenderit maiores fugiat, sunt excepturi magnam ipsa
+                        earum, natus beatae </p>
+                    <img class="aboutimg" src="you.png" alt="">
+                </div>
+                <div class="plan" id="we">
+                    <h1>What we have?</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia consectetur nesciunt, ipsa nisi
+                        vel culpa, reprehenderit maiores provident cupiditate fugiat, sunt excepturi magnam ipsa earum,
+                        natus beatae .</p>
+                    <img class="aboutimg" src="we.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <div class="foot">
+                <div class="footlist" id="contact">
+                    <h3>~Contact Us</h3>
+                    <ul>
+                        <li>
+                            <pre>+91 913**45676</pre>
+                        </li>
+                        <li>yourworld@imagine.com</li>
+                        <li>
+                            <pre>Railway Road,
+Bhawani Tower,
+3rd floor, 
+Delhi</pre>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footlist" id="genre">
+                    <h3>~Topics</h3>
+                    <ul>
+                        <li>What if</li>
+                        <li>Life ahead</li>
+                        <li>God</li>
+                        <li>Governement</li>
+
+                    </ul>
+                </div>
+                <div class="footlist" id="trend">
+                    <h3>~Trending</h3>
+                    <ul>
+                        <li>Illuminati</li>
+                        <li>Taliban v/s <br>Azad hind fauj</li>
+                        <li>College Reopening</li>
+                        <li>Technology Ahead</li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </footer>
+    </article>
+
+    <div class="box" id="cornerlogo">
+        <img class="logo" src="logo.png" alt="">
+    </div>
+    <div class="box" id="box4">Chat With US</div>
+     <!-- Option 1: Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>
